@@ -2,23 +2,39 @@
 
 
 Soldier::Soldier() {
-	// TODO - implement Soldier::Soldier
-	throw "Not yet implemented";
+	//tino was here
+	this->healthPerSoldier = 0 ;
+	this->damagePerSoldier = 0;
+	this->defencePerSoldier = 0;
+	this->amountOfSoldiersPerUnit = 0;
+	this->unitName = "";
 }
 
-Soldier::Soldier(int int_healthPerSoldier, int int_damagePerSoldier, int int_defencePerSoldier, int int_amountOfSoldiersPerUnit, int string_unitName) {
-	// TODO - implement Soldier::Soldier
-	throw "Not yet implemented";
+Soldier::Soldier(int healthPerSoldier, int damagePerSoldier, int defencePerSoldier, int amountOfSoldiersPerUnit, std::string unitName) {
+    //tinooooo
+	this->healthPerSoldier = healthPerSoldier;
+	this->damagePerSoldier = damagePerSoldier;
+	this->defencePerSoldier = defencePerSoldier;
+	this->amountOfSoldiersPerUnit = amountOfSoldiersPerUnit;
+	this->unitName = unitName;
 }
 
 Memento* Soldier::militusMemento() {
-	// TODO - implement Soldier::militusMemento
-	throw "Not yet implemented";
+    //tinooooooo
+	Memento* mem = new Memento(healthPerSoldier, damagePerSoldier, defencePerSoldier, amountOfSoldiersPerUnit, unitName);
+    return mem;
 }
 
 void Soldier::vivificaMemento(Memento* mem) {
-	// TODO - implement Soldier::vivificaMemento
-	throw "Not yet implemented";
+	//tinooooooo
+	if (mem) {
+        healthPerSoldier = mem->getHealth();
+        damagePerSoldier = mem->getDamage();
+        defencePerSoldier = mem->getDefence();
+        amountOfSoldiersPerUnit = mem->getAmountOfSoldiers();
+        unitName = mem->getUnitName();
+	}
+	
 }
 
 

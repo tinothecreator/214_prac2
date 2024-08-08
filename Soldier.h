@@ -17,7 +17,7 @@ public:
 
 	Soldier();
 
-	Soldier(int int_healthPerSoldier, int int_damagePerSoldier, int int_defencePerSoldier, int int_amountOfSoldiersPerUnit, int string_unitName);
+	Soldier(int healthPerSoldier, int damagePerSoldier, int defencePerSoldier, int amountOfSoldiersPerUnit, std::string unitName);
 	
 	virtual Soldier* clonis() = 0;
 	
