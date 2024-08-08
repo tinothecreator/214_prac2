@@ -13,7 +13,12 @@ private:
 	std::string unitName;
 
 public:
-	Memento(int int_healthPersoldier, int int_damagePerSoldier, int int_defencePerSoldier, int int_amountOfSoldiersPerUnit, int string_unitName);
+	Memento(int healthPersoldier, int damagePerSoldier, int defencePerSoldier, int amountOfSoldiersPerUnit, std::string unitName);
+	int getHealth() const; 
+    int getDamage() const; 
+    int getDefence() const; 
+    int getAmountOfSoldiers() const; 
+    const std::string& getUnitName() const; 
 };
 
 #endif
