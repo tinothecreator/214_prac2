@@ -1,21 +1,18 @@
 #include "BoatmanFactory.h"
 
 Soldier* BoatmanFactory::createUnit() {
-	// TODO - implement BoatmanFactory::createUnit
-	throw "Not yet implemented";
+	soldiers = new Boatman();
+	return soldiers;
 }
 
 int BoatmanFactory::calculateTotalHeathPerUnit() {
-	// TODO - implement BoatmanFactory::calculateTotalHeathPerUnit
-	throw "Not yet implemented";
+	return soldiers->healthPerSoldier * soldiers->amountOfSoldiersPerUnit;
 }
 
 int BoatmanFactory::calculateTotalDamagePerUnit() {
-	// TODO - implement BoatmanFactory::calculateTotalDamagePerUnit
-	throw "Not yet implemented";
+	return soldiers->damagePerSoldier * soldiers->amountOfSoldiersPerUnit;
 }
 
 int BoatmanFactory::calculateTotalDefencePerUnit() {
-	// TODO - implement BoatmanFactory::calculateTotalDefencePerUnit
-	throw "Not yet implemented";
+	return soldiers->defencePerSoldier * soldiers->amountOfSoldiersPerUnit;
 }

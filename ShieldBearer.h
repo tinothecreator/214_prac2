@@ -4,9 +4,9 @@
 #include <iostream>
 #include "Soldier.h"
 
-class ShieldBearer : Soldier {
+class ShieldBearer : public Soldier {
 
-private:
+public:
 	int healthPerSoldier;
 	int damagePerSoldier;
 	int defencePerSoldier;

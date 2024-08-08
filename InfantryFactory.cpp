@@ -1,21 +1,19 @@
 #include "InfantryFactory.h"
 
-Soldiers* InfantryFactory::createUnit() {
-	// TODO - implement InfantryFactory::createUnit
-	throw "Not yet implemented";
+
+Soldier* InfantryFactory::createUnit() {
+	soldiers = new Infantry();
+	return soldiers;
 }
 
 int InfantryFactory::calculateTotalHeathPerUnit() {
-	// TODO - implement InfantryFactory::calculateTotalHeathPerUnit
-	throw "Not yet implemented";
+	return soldiers->healthPerSoldier * soldiers->amountOfSoldiersPerUnit;
 }
 
 int InfantryFactory::calculateTotalDamagePerUnit() {
-	// TODO - implement InfantryFactory::calculateTotalDamagePerUnit
-	throw "Not yet implemented";
+	return soldiers->damagePerSoldier * soldiers->amountOfSoldiersPerUnit;
 }
 
 int InfantryFactory::calculateTotalDefencePerUnit() {
-	// TODO - implement InfantryFactory::calculateTotalDefencePerUnit
-	throw "Not yet implemented";
+	return soldiers->defencePerSoldier * soldiers->amountOfSoldiersPerUnit;
 }

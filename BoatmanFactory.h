@@ -3,8 +3,9 @@
 
 #include <iostream>
 #include "SoldierFactory.h"
+#include "Boatman.h"
 
-class BoatmanFactory : SoldierFactory {
+class BoatmanFactory : public SoldierFactory {
 
 
 protected:

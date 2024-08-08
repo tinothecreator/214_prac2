@@ -4,9 +4,10 @@
 #include <iostream>
 #include "Soldier.h"
 
-class Boatman : Soldier {
 
-private:
+class Boatman : public Soldier {
+
+public:
 	int healthPerSoldier;
 	int damagePerSoldier;
 	int defencePerSoldier;

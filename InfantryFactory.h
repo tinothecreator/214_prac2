@@ -2,12 +2,14 @@
 #define INFANTRYFACTORY_H
 
 #include<iostream>
-#include"SoldierFactory.h"
+#include "SoldierFactory.h"
+#include "Infantry.h"
 
-class InfantryFactory : SoldierFactory {
+
+class InfantryFactory : public SoldierFactory {
 
 
-protected:
+public:
 	Soldier* createUnit();
 
 	int calculateTotalHeathPerUnit();

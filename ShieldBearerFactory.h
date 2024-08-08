@@ -2,8 +2,10 @@
 #define SHIELDBEARERFACTORY_H
 
 #include "SoldierFactory.h"
+#include "ShieldBearer.h"
 
-class ShieldBearerFactory : SoldierFactory {
+
+class ShieldBearerFactory : public SoldierFactory {
 
 
 protected:

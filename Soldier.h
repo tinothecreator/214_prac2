@@ -6,7 +6,11 @@
 
 class Soldier {
 
-private:
+	friend class InfantryFactory;
+	friend class ShieldBearerFactory;
+	friend class BoatmanFactory;
+
+protected:
 	int healthPerSoldier;
 	int damagePerSoldier;
 	int defencePerSoldier;

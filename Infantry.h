@@ -5,9 +5,10 @@
 #include <string>
 #include "Soldier.h"
 
-class Infantry : Soldier {
 
-private:
+class Infantry : public Soldier {
+
+public:
 	int healthPerSoldier;
 	int damagePerSoldier;
 	int defencePerSoldier;

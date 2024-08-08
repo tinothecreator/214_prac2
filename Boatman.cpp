@@ -46,15 +46,26 @@ void Boatman::vivificaMemento(Memento* mem) {
 }
 
 Boatman::Boatman() {
-	// TODO - implement Boatman::Boatman
-	throw "Not yet implemented";
+	this->healthPerSoldier = 0;
+	this->damagePerSoldier = 0;
+	this->defencePerSoldier = 0;
+	this->amountOfSoldiersPerUnit = 0;
+	this->unitName = "";
 }
 
 Boatman::Boatman(int int_healthPersoldier, int int_damagePerSoldier, int int_defencePerSoldier, int int_amountOfSoldiersPerUnit, int string_unitName) {
-	// TODO - implement Boatman::Boatman
-	throw "Not yet implemented";
+	this->healthPerSoldier = int_healthPersoldier;
+	this->damagePerSoldier = int_damagePerSoldier;
+	this->defencePerSoldier = int_defencePerSoldier;
+	this->amountOfSoldiersPerUnit = int_amountOfSoldiersPerUnit;
+	this->unitName = string_unitName;
 }
 
 Boatman::Boatman(const Boatman &other)
 {
+	this->healthPerSoldier = other.healthPerSoldier;
+	this->damagePerSoldier = other.damagePerSoldier;
+	this->defencePerSoldier = other.defencePerSoldier;
+	this->amountOfSoldiersPerUnit = other.amountOfSoldiersPerUnit;
+	this->unitName = other.unitName;
 }
