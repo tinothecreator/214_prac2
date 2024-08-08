@@ -1,6 +1,6 @@
 #include "Soldier.h"
 
-
+/// @brief /
 Soldier::Soldier() {
 	//tino was here
 	this->healthPerSoldier = 0 ;
