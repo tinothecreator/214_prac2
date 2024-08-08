@@ -6,33 +6,28 @@ Soldier* ShieldBearer::clonis() {
 }
 
 void ShieldBearer::engage() {
-	// TODO - implement ShieldBearer::engage
-	throw "Not yet implemented";
+	// implemented in Soldier.cpp
 }
 
 void ShieldBearer::disengage() {
-	// TODO - implement ShieldBearer::disengage
-	throw "Not yet implemented";
+	// implemented in Soldier.cpp
 }
 
 void ShieldBearer::prepare() {
-	// TODO - implement ShieldBearer::prepare
-	throw "Not yet implemented";
+	std::cout << "ShieldBearer unit: " << unitName << "is preparing for battle." << std::endl;
+	std::cout << "ShieldBearers are tightening shield grips and preparing defense formations." << std::endl;
 }
 
 void ShieldBearer::execute() {
-	// TODO - implement ShieldBearer::execute
-	throw "Not yet implemented";
+	std::cout << "ShieldBearers are advancing slowly, protecting the front lines with their shields." << std::endl;
 }
 
 void ShieldBearer::retreat() {
-	// TODO - implement ShieldBearer::retreat
-	throw "Not yet implemented";
+	std::cout << "ShieldBearers are retreating cautiously, keeping shields up to protect the rear." << std::endl;
 }
 
 void ShieldBearer::rest() {
-	// TODO - implement ShieldBearer::rest
-	throw "Not yet implemented";
+	std::cout << "ShieldBearers are resting, ensuring shields and armor are intact." << std::endl;
 }
 
 Memento* ShieldBearer::militusMemento() {

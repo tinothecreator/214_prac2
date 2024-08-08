@@ -6,33 +6,29 @@ Soldier* Infantry::clonis() {
 }
 
 void Infantry::engage() {
-	// TODO - implement Infantry::engage
-	throw "Not yet implemented";
+	// implemented in Soldier.cpp
 }
 
 void Infantry::disengage() {
-	// TODO - implement Infantry::disengage
-	throw "Not yet implemented";
+	// implemented in Soldier.cpp
 }
 
 void Infantry::prepare() {
-	// TODO - implement Infantry::prepare
-	throw "Not yet implemented";
+	std::cout << "Infantry unit: " << unitName << " is preparing for battle." << std::endl;
+	std::cout << "Infantry is checking armor and weapons, forming ranks, and boosting morale." << std::endl;
+
 }
 
 void Infantry::execute() {
-	// TODO - implement Infantry::execute
-	throw "Not yet implemented";
+	std::cout << "Infantry is charging forward with swords drawn!" << std::endl;
 }
 
 void Infantry::retreat() {
-	// TODO - implement Infantry::retreat
-	throw "Not yet implemented";
+	std::cout << "Infantry is falling back in a controlled retreat, maintaining formation." << std::endl;
 }
 
 void Infantry::rest() {
-	// TODO - implement Infantry::rest
-	throw "Not yet implemented";
+	std::cout << "Infantry is resting, tending to wounds, and preparing for the next battle." << std::endl;
 }
 
 Memento* Infantry::militusMemento() {

@@ -37,4 +37,14 @@ void Soldier::vivificaMemento(Memento* mem) {
 	
 }
 
+void Soldier::engage() { // template method!!
+    prepare();  
+    execute();  
+}
+
+void Soldier::disengage() { // template method!!
+    retreat();  
+    rest();     
+}
+
 

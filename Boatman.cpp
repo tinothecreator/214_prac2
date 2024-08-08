@@ -6,33 +6,28 @@ Soldier* Boatman::clonis() {
 }
 
 void Boatman::engage() {
-	// TODO - implement Boatman::engage
-	throw "Not yet implemented";
+	// implemented in Soldier.cpp
 }
 
 void Boatman::disengage() {
-	// TODO - implement Boatman::disengage
-	throw "Not yet implemented";
+	// implemented in Soldier.cpp
 }
 
 void Boatman::prepare() {
-	// TODO - implement Boatman::prepare
-	throw "Not yet implemented";
+	std::cout << "Boatman unit: " << unitName << " is preparing for battle." << std::endl;
+	std::cout << "Boatmen are inspecting their boats, checking oars, and preparing for a swift river crossing." << std::endl;
 }
 
 void Boatman::execute() {
-	// TODO - implement Boatman::execute
-	throw "Not yet implemented";
+	std::cout << "Boatmen are rowing across the river swiftly, navigating through enemy fire." << std::endl;
 }
 
 void Boatman::retreat() {
-	// TODO - implement Boatman::retreat
-	throw "Not yet implemented";
+	std::cout << "Boatmen are retreating by rowing back to the safety of their base." << std::endl; 
 }
 
 void Boatman::rest() {
-	// TODO - implement Boatman::rest
-	throw "Not yet implemented";
+	std::cout << "Boatmen are resting, repairing boats, and preparing for the next mission." << std::endl;
 }
 
 Memento* Boatman::militusMemento() {
