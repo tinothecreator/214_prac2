@@ -5,6 +5,9 @@
 #include <vector>
 #include "Soldier.h"
 #include "Soldierfactory.h"
+#include "InfantryFactory.h"
+#include "BoatmanFactory.h"
+#include "ShieldBearerFactory.h"
 
 class Army{
 

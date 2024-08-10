@@ -13,7 +13,7 @@ Soldier* InfantryFactory::createUnit(int amountOfSoldiersPerUnit) {
 	//amount of soldiers per unit => 
 	//name =>  delta
 
-	soldier = new Infantry(100,50,30,AmountOfSoldiersPerUnit,"delta")
+	soldiers = new Infantry(100,50,30,amountOfSoldiersPerUnit,"delta");
 	return soldiers;
 }
 

@@ -11,7 +11,7 @@ Titus::	Titus(std::string name, int infantry_size, int boatman_size, int shieldb
 
 Titus::Titus() {
 	this->name = "";
-	this->army = nullptr;
+	this->amry = nullptr; // named it amry instead of army 
 }
 
 void Titus::attack() {

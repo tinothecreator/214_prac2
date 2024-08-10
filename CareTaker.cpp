@@ -1,10 +1,10 @@
 #include "Caretaker.h"
 
-void addMemento(Memento* mem) {
+void CareTaker::addMemento(Memento* mem) {
     mementos.push_back(mem);
 }
 
-Memento* getMemento(size_t index) const {
+Memento* CareTaker::getMemento(size_t index) const {
     if (index < mementos.size()) {
         return mementos[index];
     }
@@ -12,9 +12,11 @@ Memento* getMemento(size_t index) const {
 }
 
 
- ~CareTaker() {
+ CareTaker::~CareTaker() {
         for (auto memento : mementos) {
             delete memento;
         }
         mementos.clear();
     }
+
+// didn't declare functions correctly 
