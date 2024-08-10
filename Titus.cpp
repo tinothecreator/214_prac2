@@ -41,7 +41,9 @@ void Titus::saveState(CareTaker& careTaker) { // not declared in h file
 
 // Refine strategy: restore a previous state of the army
 void Titus::restoreState(CareTaker& careTaker, size_t index) { // not decalred in h file 
-    for (size_t i = 0; i < amry->getSoldiers().size(); ++i) { // getSOldiers method not declared and implemented in Army 
+    int len = amry->getSoldiers().size();
+    
+    for (size_t i = 0; i < len ; ++i) { // getSOldiers method not declared and implemented in Army 
         Memento* mem = careTaker.getMemento(index);
         if (mem) {
             amry->getSoldiers()[i]->vivificaMemento(mem);

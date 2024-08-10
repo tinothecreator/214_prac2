@@ -54,14 +54,8 @@ Army::~Army() { // didn't declare properly
             delete soldier;
         }
         soldiers.clear();
-    }
+}
 
-Soldier* Army::getSoldiers(){ // double check implementation
-    
-
-    for (auto soldier = soldiers.begin(); soldier!= soldiers.end(); ++soldier)
-    {
-        std::cout << *soldier << std::endl;
-    }
-    
+std::vector<Soldier*>& Army::getSoldiers(){ //tino double checked
+    return soldiers;
 }
