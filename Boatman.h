@@ -17,7 +17,7 @@ public:
 public:
     Boatman();
 
-	Boatman(int int_healthPersoldier, int int_damagePerSoldier, int int_defencePerSoldier, int int_amountOfSoldiersPerUnit, int string_unitName);
+	Boatman(int int_healthPersoldier, int int_damagePerSoldier, int int_defencePerSoldier, int int_amountOfSoldiersPerUnit, const std::string& string_unitName);
 
 	Boatman(const Boatman& other); 
 

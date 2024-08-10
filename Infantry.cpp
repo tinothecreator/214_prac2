@@ -8,7 +8,7 @@ Infantry::Infantry() {
 	this->unitName = "";
 } 
 
-Infantry::Infantry(int int_healthPersoldier, int int_damagePerSoldier, int int_defencePerSoldier, int int_amountOfSoldiersPerUnit, int string_unitName) {
+Infantry::Infantry(int int_healthPersoldier, int int_damagePerSoldier, int int_defencePerSoldier, int int_amountOfSoldiersPerUnit, const std::string& string_unitName) {
 	this->healthPerSoldier = int_healthPersoldier;
 	this->damagePerSoldier = int_damagePerSoldier;
 	this->defencePerSoldier = int_defencePerSoldier;

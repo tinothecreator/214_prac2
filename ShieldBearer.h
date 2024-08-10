@@ -16,7 +16,7 @@ public:
 public:
     ShieldBearer();
 
-	ShieldBearer(int int_healthPersoldier, int int_damagePerSoldier, int int_defencePerSoldier, int int_amountOfSoldiersPerUnit, int string_unitName);
+	ShieldBearer(int int_healthPersoldier, int int_damagePerSoldier, int int_defencePerSoldier, int int_amountOfSoldiersPerUnit, const std::string& string_unitName);
 
 	ShieldBearer(const ShieldBearer& other); 
 
