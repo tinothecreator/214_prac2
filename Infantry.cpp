@@ -14,14 +14,6 @@ Soldier* Infantry::clonis() {
 	return new Infantry(*this);
 }
 
-void Infantry::engage() {
-	// implemented in Soldier.cpp
-}
-
-void Infantry::disengage() {
-	// implemented in Soldier.cpp
-}
-
 void Infantry::prepare() {
 	// std::cout << "Infantry unit: " << unitName << " is preparing for battle." << std::endl;
 	// std::cout << "Infantry is checking armor and weapons, forming ranks, and boosting morale." << std::endl;

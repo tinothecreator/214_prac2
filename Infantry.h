@@ -28,20 +28,16 @@ public:
 
 	Soldier* clonis();
 
-	void engage();
-
-	void disengage();
-
-	virtual ~Infantry(); 
+	~Infantry() override; 
 
 private:
-	void prepare();
+	void prepare()override;
 
-	void execute();
+	void execute()override;
 
-	void retreat();
+	void retreat()override;
 
-	void rest();
+	void rest()override;
 
 
 	

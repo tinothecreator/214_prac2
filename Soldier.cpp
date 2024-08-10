@@ -38,6 +38,7 @@ void Soldier::vivificaMemento(Memento* mem) {
 }
 
 void Soldier::engage() { // template method!!
+    std::cout<<"Soldier engage!";
     prepare();  
     execute();  
 }

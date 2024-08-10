@@ -25,19 +25,19 @@ public:
 	
 	virtual Soldier* clonis() = 0;
 	
-	virtual void engage() = 0;
+	virtual void engage();
 
-	virtual void disengage() = 0;
+	virtual void disengage();
 
 	Memento* militusMemento();
 
 	void vivificaMemento(Memento* mem);
 
-	virtual ~Soldier()=0;
+	virtual ~Soldier();
 
 	
 
-private:
+protected:
 	virtual void prepare() = 0;
 
 	virtual void execute() = 0;
