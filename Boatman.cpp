@@ -16,13 +16,7 @@ Soldier* Boatman::clonis() {
 	return new Boatman(*this);
 }
 
-void Boatman::engage() {
-	// implemented in Soldier.cpp
-}
 
-void Boatman::disengage() {
-	// implemented in Soldier.cpp
-}
 
 void Boatman::prepare() {
 	// std::cout << "Boatman unit: " << unitName << " is preparing for battle." << std::endl;

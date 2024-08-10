@@ -16,13 +16,6 @@ Soldier* ShieldBearer::clonis() {
 	return new ShieldBearer(*this);
 }
 
-void ShieldBearer::engage() {
-	// implemented in Soldier.cpp
-}
-
-void ShieldBearer::disengage() {
-	// implemented in Soldier.cpp
-}
 
 void ShieldBearer::prepare() {
 	// std::cout << "ShieldBearer unit: " << unitName << "is preparing for battle." << std::endl;
