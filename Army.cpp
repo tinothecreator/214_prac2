@@ -9,6 +9,7 @@ Army::Army(int infantry_size, int boatman_size, int shieldbearer_size) {
 	InfantryFactory infantryFactory;
 	BoatmanFactory boatmanFactory;
 	ShieldBearerFactory shieldbearerFactory;
+	this->size = infantry_size+boatman_size+shieldbearer_size;
 
 	for (int i = 0; i < infantry_size; ++i) {
        

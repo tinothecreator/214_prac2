@@ -10,3 +10,11 @@ Memento* getMemento(size_t index) const {
     }
     return nullptr;
 }
+
+
+ ~CareTaker() {
+        for (auto memento : mementos) {
+            delete memento;
+        }
+        mementos.clear();
+    }

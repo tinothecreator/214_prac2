@@ -9,6 +9,8 @@ class CareTaker {
         void addMemento(Memento* mem);
 
         Memento* getMemento(size_t index) const;
+
+        ~CareTaker();
     
 };
 

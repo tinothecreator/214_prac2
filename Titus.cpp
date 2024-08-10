@@ -33,6 +33,22 @@ void Titus::retreat() {
     }
 }
 
+void Titus::saveState(CareTaker& careTaker) {
+    for (Soldier* soldier : amry->getSoldiers()) {
+        careTaker.addMemento(soldier->militusMemento());
+    }
+}
+
+// Refine strategy: restore a previous state of the army
+void Titus::restoreState(CareTaker& careTaker, size_t index) {
+    for (size_t i = 0; i < amry->getSoldiers().size(); ++i) {
+        Memento* mem = careTaker.getMemento(index);
+        if (mem) {
+            amry->getSoldiers()[i]->vivificaMemento(mem);
+        }
+    }
+}
+
 
 Titus::~Titus() {
     delete amry;
