@@ -15,7 +15,7 @@ private:
 public:
 	Army();
 
-	Army(int size);
+	Army(int infantry_size, char infantry, int boatman_size, char boatman, int shieldbearer_size, char shieldbearer);
 };
 
 #endif
