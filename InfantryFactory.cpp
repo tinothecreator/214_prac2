@@ -12,8 +12,9 @@ Soldier* InfantryFactory::createUnit(int amountOfSoldiersPerUnit) {
 	//defence => 30
 	//amount of soldiers per unit => 
 	//name =>  delta
-
+    std::cout<<"infantryFactory 1\n";
 	soldiers = new Infantry(100,50,30,amountOfSoldiersPerUnit,"delta");
+	std::cout<<"infantryFactory 2\n";
 	return soldiers;
 }
 

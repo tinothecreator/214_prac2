@@ -6,7 +6,9 @@ Titus::	Titus(std::string name, int infantry_size, int boatman_size, int shieldb
 	this->infantry_size = infantry_size;
 	this->shieldbearer_size = shieldbearer_size;
 	this->boatman_size = boatman_size;
+    std::cout <<"titus 1\n";
 	this->amry = new Army(infantry_size,boatman_size,shieldbearer_size);
+    std::cout <<"titus 2\n";
 }
 
 Titus::Titus() {

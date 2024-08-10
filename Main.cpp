@@ -4,7 +4,11 @@
 
 int main() {
     // Create a Titus object with an army
+
+    std::cout<<"main 0\n";
     Titus titus("General Titus", 10, 5, 3);
+
+    std::cout<< "main 1\n";
 
     // Create a CareTaker to manage state saves
     CareTaker careTaker;
@@ -12,6 +16,8 @@ int main() {
     // Initial attack
     std::cout << "Initial Attack:" << std::endl;
     titus.attack();
+
+    std::cout<< "main 2\n";
 
     // Save the state of the army
     std::cout << "\nSaving the state of the army..." << std::endl;
