@@ -5,30 +5,44 @@ Army::Army() {
 	this->size = 0;
 }
 
-Army::Army(int infantry_size, char infantry, int boatman_size, char boatman, int shieldbearer_size, char shieldbearer) {
+Army::Army(int infantry_size, int boatman_size, int shieldbearer_size) {
 	InfantryFactory infantryFactory;
 	BoatmanFactory boatmanFactory;
 	ShieldBearerFactory shieldbearerFactory;
 
 	for (int i = 0; i < infantry_size; ++i) {
-        if (infantry == 'i') {
-            Soldier* newInfantry = infantryFactory.createUnit(infantry_size);
-            soldiers.push_back(newInfantry);
-        }
+       
+		Soldier* newInfantry = infantryFactory.createUnit(infantry_size);
+		soldiers.push_back(newInfantry);
+        
     }
 
     for (int i = 0; i < boatman_size; ++i) {
-        if (boatman == 'b') {
-            Soldier* newBoatman = boatmanFactory.createUnit(boatman_size);
-            soldiers.push_back(newBoatman);
-        }
+       
+		Soldier* newBoatman = boatmanFactory.createUnit(boatman_size);
+		soldiers.push_back(newBoatman);
+    
     }
 
     for (int i = 0; i < shieldbearer_size; ++i) {
-        if (shieldbearer == 's') {
-            Soldier* newShieldBearer = shieldbearerFactory.createUnit(shieldbearer_size);
-            soldiers.push_back(newShieldBearer);
-        }
+        
+		Soldier* newShieldBearer = shieldbearerFactory.createUnit(shieldbearer_size);
+		soldiers.push_back(newShieldBearer);
+        
+    }
+}
+
+void Army::engage() {
+    std::cout << "The army is engaging in combat!" << std::endl;
+    for (Soldier* soldier : soldiers) {
+        soldier->engage();  // Call the engage method on each Soldier
+    }
+}
+
+void Army::disengage() {
+    std::cout << "The army is retreating from combat!" << std::endl;
+    for (Soldier* soldier : soldiers) {
+        soldier->disengage();  // Call the disengage method on each Soldier
     }
 }
 

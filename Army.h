@@ -15,7 +15,13 @@ private:
 public:
 	Army();
 
-	Army(int infantry_size, char infantry, int boatman_size, char boatman, int shieldbearer_size, char shieldbearer);
+	Army(int infantry_size, int boatman_size, int shieldbearer_size);
+
+	void engage();
+
+	void disengage();
+
+	~Army();
 };
 
 #endif

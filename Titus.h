@@ -10,7 +10,9 @@
 class Titus {
 
 private:
-	int size;
+	int infantry_size;
+	int boatman_size;
+	int shieldbearer_size;
 	Army* amry;
 	std::string name;
 
@@ -19,9 +21,11 @@ public:
 
 	void retreat();
 
-	Titus(int string_name, int int_size, int army_Army);
+	Titus(std::string name, int infantry_size, int boatman_size, int shieldbearer_size);
 
 	Titus();
+
+	~Titus();
 };
 
 #endif
