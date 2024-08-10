@@ -10,21 +10,21 @@ Memento::Memento(int healthPersoldier, int damagePerSoldier, int defencePerSoldi
 }
 
 
-int getHealth() const { 
+int Memento::getHealth() const { 
 	return healthPerSoldier; 
 }
 
-int getDamage() const { 
+int Memento::getDamage() const { 
 	return damagePerSoldier; 
 }
 
-int getDefence() const { 
+int Memento::getDefence() const { 
 	return defencePerSoldier; 
 }
 
-int getAmountOfSoldiers() const {
-	return amountOfSoldiersPerUnit;
+int Memento::getAmountOfSoldiers() const {
+	return amountOfSoldersPerUnit;
 }
-const std::string& getUnitName() const {
+const std::string& Memento::getUnitName() const {
 	return unitName; 
 }
