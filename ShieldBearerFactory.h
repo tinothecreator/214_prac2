@@ -8,7 +8,7 @@
 class ShieldBearerFactory : public SoldierFactory {
 
 
-protected:
+public:
 	Soldier* createUnit(int amountOfSoldiersPerUnit);
 
 	int calculateTotalHeathPerUnit();
