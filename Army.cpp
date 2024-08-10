@@ -12,21 +12,21 @@ Army::Army(int infantry_size, char infantry, int boatman_size, char boatman, int
 
 	for (int i = 0; i < infantry_size; ++i) {
         if (infantry == 'i') {
-            Soldier* newInfantry = infantryFactory.createUnit();
+            Soldier* newInfantry = infantryFactory.createUnit(infantry_size);
             soldiers.push_back(newInfantry);
         }
     }
 
     for (int i = 0; i < boatman_size; ++i) {
         if (boatman == 'b') {
-            Soldier* newBoatman = boatmanFactory.createUnit();
+            Soldier* newBoatman = boatmanFactory.createUnit(boatman_size);
             soldiers.push_back(newBoatman);
         }
     }
 
     for (int i = 0; i < shieldbearer_size; ++i) {
         if (shieldbearer == 's') {
-            Soldier* newShieldBearer = shieldbearerFactory.createUnit();
+            Soldier* newShieldBearer = shieldbearerFactory.createUnit(shieldbearer_size);
             soldiers.push_back(newShieldBearer);
         }
     }

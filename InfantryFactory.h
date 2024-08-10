@@ -10,7 +10,7 @@ class InfantryFactory : public SoldierFactory {
 
 
 public:
-	Soldier* createUnit();
+	Soldier* createUnit(int amountOfSoldiersPerUnit);
 
 	int calculateTotalHeathPerUnit();
 

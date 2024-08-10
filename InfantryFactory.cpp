@@ -1,8 +1,19 @@
 #include "InfantryFactory.h"
 
 
-Soldier* InfantryFactory::createUnit() {
-	soldiers = new Infantry();
+Soldier* InfantryFactory::createUnit(int amountOfSoldiersPerUnit) {
+	// i chnaged this because we need to make soldiers with attrributes 
+	//and not just a default constructor
+	//soldiers = new Infantry();
+
+	//Infantry Soldiers will have these stats
+	//health => 100
+	//damage => 50
+	//defence => 30
+	//amount of soldiers per unit => 
+	//name =>  delta
+
+	soldier = new Infantry(100,50,30,AmountOfSoldiersPerUnit,"delta")
 	return soldiers;
 }
 
