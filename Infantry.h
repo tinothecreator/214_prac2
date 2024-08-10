@@ -32,6 +32,8 @@ public:
 
 	void disengage();
 
+	virtual ~Infantry(); 
+
 private:
 	void prepare();
 

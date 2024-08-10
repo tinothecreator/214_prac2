@@ -33,6 +33,8 @@ public:
 
 	void vivificaMemento(Memento* mem);
 
+	virtual ~Soldier()=0;
+
 	
 
 private:

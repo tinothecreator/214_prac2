@@ -10,6 +10,7 @@ Army::Army(int infantry_size, int boatman_size, int shieldbearer_size) {
 	InfantryFactory * infantryFactory; // made them pointers because it's the only thing that took the errors away lol ><
 	BoatmanFactory * boatmanFactory; // also included these h files in army.h
 	ShieldBearerFactory * shieldbearerFactory;
+
 	this->size = infantry_size+boatman_size+shieldbearer_size;
 
 	for (int i = 0; i < infantry_size; ++i) {

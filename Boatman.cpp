@@ -104,3 +104,9 @@ void Boatman::vivificaMemento(Memento* mem) {
 	}
 }
 
+
+Boatman::~Boatman() {
+    // Cleanup if necessary
+    std::cout << "Boatman unit " << unitName << " is being destroyed." << std::endl;
+}
+

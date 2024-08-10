@@ -30,6 +30,8 @@ public:
 
 	void disengage();
 
+	virtual ~ShieldBearer(); 
+
 private:
 	void prepare();
 

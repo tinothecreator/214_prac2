@@ -32,6 +32,8 @@ public:
 
 	void disengage();
 
+	virtual ~Boatman();
+
 private:
 	void prepare();
 

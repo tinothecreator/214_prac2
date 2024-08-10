@@ -48,3 +48,8 @@ void Soldier::disengage() { // template method!!
 }
 
 
+Soldier::~Soldier() {
+    
+}
+
+

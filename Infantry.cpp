@@ -44,7 +44,9 @@ void Infantry::prepare() {
 
 	std::cout << "Infantry is preparing for battle with a square formation." << std::endl;
     
-    int formationSize = sqrt(amountOfSoldiersPerUnit); // Square root for a square formation
+    //int formationSize = sqrt(amountOfSoldiersPerUnit); // Square root for a square formation
+    //we cant use sqrt , that needs the math library
+    int formationSize = (amountOfSoldiersPerUnit)/2;
     for (int i = 0; i < formationSize; ++i) {
         for (int j = 0; j < formationSize; ++j) {
             std::cout << "* ";  // Printing stars to represent soldiers
@@ -106,5 +108,11 @@ void Infantry::vivificaMemento(Memento* mem) {
         amountOfSoldiersPerUnit = mem->getAmountOfSoldiers();
         unitName = mem->getUnitName();
 	}
+}
+
+
+Infantry::~Infantry() {
+    // Cleanup if necessary
+    std::cout << "Infantry unit " << unitName << " is being destroyed." << std::endl;
 }
 

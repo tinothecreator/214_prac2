@@ -110,3 +110,9 @@ void ShieldBearer::vivificaMemento(Memento* mem) {
         unitName = mem->getUnitName();
 	}
 }
+
+
+ShieldBearer::~ShieldBearer() {
+    // Cleanup if necessary
+    std::cout << "ShieldBearer unit " << unitName << " is being destroyed." << std::endl;
+}
