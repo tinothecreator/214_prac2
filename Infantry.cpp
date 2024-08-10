@@ -95,12 +95,17 @@ void Infantry::rest() {
 }
 
 Memento* Infantry::militusMemento() {
-	// TODO - implement Infantry::militusMemento
-	throw "Not yet implemented";
+	Memento* mem = new Memento(healthPerSoldier, damagePerSoldier, defencePerSoldier, amountOfSoldiersPerUnit, unitName);
+    return mem;
 }
 
 void Infantry::vivificaMemento(Memento* mem) {
-	// TODO - implement Infantry::vivificaMemento
-	throw "Not yet implemented";
+	if (mem) {
+        healthPerSoldier = mem->getHealth();
+        damagePerSoldier = mem->getDamage();
+        defencePerSoldier = mem->getDefence();
+        amountOfSoldiersPerUnit = mem->getAmountOfSoldiers();
+        unitName = mem->getUnitName();
+	}
 }
 

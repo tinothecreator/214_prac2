@@ -1,5 +1,32 @@
 #include "Boatman.h"
 
+
+Boatman::Boatman() {
+	this->healthPerSoldier = 0;
+	this->damagePerSoldier = 0;
+	this->defencePerSoldier = 0;
+	this->amountOfSoldiersPerUnit = 0;
+	this->unitName = "";
+}
+
+Boatman::Boatman(int int_healthPersoldier, int int_damagePerSoldier, int int_defencePerSoldier, int int_amountOfSoldiersPerUnit, int string_unitName) {
+	this->healthPerSoldier = int_healthPersoldier;
+	this->damagePerSoldier = int_damagePerSoldier;
+	this->defencePerSoldier = int_defencePerSoldier;
+	this->amountOfSoldiersPerUnit = int_amountOfSoldiersPerUnit;
+	this->unitName = string_unitName;
+}
+
+Boatman::Boatman(const Boatman &other)
+{
+	this->healthPerSoldier = other.healthPerSoldier;
+	this->damagePerSoldier = other.damagePerSoldier;
+	this->defencePerSoldier = other.defencePerSoldier;
+	this->amountOfSoldiersPerUnit = other.amountOfSoldiersPerUnit;
+	this->unitName = other.unitName;
+}
+
+
 Soldier* Boatman::clonis() {
 	// TODO - implement Boatman::clonis
 	throw "Not yet implemented";
@@ -64,36 +91,17 @@ void Boatman::rest() {
 }
 
 Memento* Boatman::militusMemento() {
-	// TODO - implement Boatman::militusMemento
-	throw "Not yet implemented";
+	Memento* mem = new Memento(healthPerSoldier, damagePerSoldier, defencePerSoldier, amountOfSoldiersPerUnit, unitName);
+    return mem;
 }
 
 void Boatman::vivificaMemento(Memento* mem) {
-	// TODO - implement Boatman::vivificaMemento
-	throw "Not yet implemented";
+	if (mem) {
+        healthPerSoldier = mem->getHealth();
+        damagePerSoldier = mem->getDamage();
+        defencePerSoldier = mem->getDefence();
+        amountOfSoldiersPerUnit = mem->getAmountOfSoldiers();
+        unitName = mem->getUnitName();
+	}
 }
 
-Boatman::Boatman() {
-	this->healthPerSoldier = 0;
-	this->damagePerSoldier = 0;
-	this->defencePerSoldier = 0;
-	this->amountOfSoldiersPerUnit = 0;
-	this->unitName = "";
-}
-
-Boatman::Boatman(int int_healthPersoldier, int int_damagePerSoldier, int int_defencePerSoldier, int int_amountOfSoldiersPerUnit, int string_unitName) {
-	this->healthPerSoldier = int_healthPersoldier;
-	this->damagePerSoldier = int_damagePerSoldier;
-	this->defencePerSoldier = int_defencePerSoldier;
-	this->amountOfSoldiersPerUnit = int_amountOfSoldiersPerUnit;
-	this->unitName = string_unitName;
-}
-
-Boatman::Boatman(const Boatman &other)
-{
-	this->healthPerSoldier = other.healthPerSoldier;
-	this->damagePerSoldier = other.damagePerSoldier;
-	this->defencePerSoldier = other.defencePerSoldier;
-	this->amountOfSoldiersPerUnit = other.amountOfSoldiersPerUnit;
-	this->unitName = other.unitName;
-}
