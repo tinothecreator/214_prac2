@@ -26,7 +26,7 @@ public:
 
 	~Army();
 
-	std::vector<Soldier*>& Army::getSoldiers(); //added for Titus
+	std::vector<Soldier*>& getSoldiers(); //added for Titus
 };
 
 #endif
