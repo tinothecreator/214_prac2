@@ -55,3 +55,13 @@ Army::~Army() { // didn't declare properly
         }
         soldiers.clear();
     }
+
+Soldier* Army::getSoldiers(){ // double check implementation
+    
+
+    for (auto soldier = soldiers.begin(); soldier!= soldiers.end(); ++soldier)
+    {
+        std::cout << *soldier << std::endl;
+    }
+    
+}

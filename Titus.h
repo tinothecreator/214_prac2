@@ -26,6 +26,10 @@ public:
 	Titus();
 
 	~Titus();
+
+	void saveState(CareTaker& careTaker);
+
+	void restoreState(CareTaker& careTaker, size_t index);
 };
 
 #endif

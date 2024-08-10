@@ -33,15 +33,15 @@ void Titus::retreat() {
     }
 }
 
-void Titus::saveState(CareTaker& careTaker) {
-    for (Soldier* soldier : amry->getSoldiers()) {
+void Titus::saveState(CareTaker& careTaker) { // not declared in h file 
+    for (Soldier* soldier : amry->getSoldiers()) { // getSOldiers method not declared and implemented in Army 
         careTaker.addMemento(soldier->militusMemento());
     }
 }
 
 // Refine strategy: restore a previous state of the army
-void Titus::restoreState(CareTaker& careTaker, size_t index) {
-    for (size_t i = 0; i < amry->getSoldiers().size(); ++i) {
+void Titus::restoreState(CareTaker& careTaker, size_t index) { // not decalred in h file 
+    for (size_t i = 0; i < amry->getSoldiers().size(); ++i) { // getSOldiers method not declared and implemented in Army 
         Memento* mem = careTaker.getMemento(index);
         if (mem) {
             amry->getSoldiers()[i]->vivificaMemento(mem);

@@ -25,6 +25,8 @@ public:
 	void disengage();
 
 	~Army();
+
+	Soldier* getSoldiers(); //added for Titus
 };
 
 #endif
