@@ -49,7 +49,7 @@ void Soldier::disengage() { // template method!!
 
 
 Soldier::~Soldier() {
-    
+    std::cout << "Soldier base class destructor called." << std::endl;
 }
 
 

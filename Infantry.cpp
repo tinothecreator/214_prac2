@@ -1,29 +1,13 @@
 #include "Infantry.h"
 
-Infantry::Infantry() {
-	this->healthPerSoldier = 0;
-	this->damagePerSoldier = 0;
-	this->defencePerSoldier = 0;
-	this->amountOfSoldiersPerUnit = 0;
-	this->unitName = "";
-} 
+Infantry::Infantry() : Soldier(), healthPerSoldier(0), damagePerSoldier(0), defencePerSoldier(0), amountOfSoldiersPerUnit(0), unitName("default") {}
 
-Infantry::Infantry(int int_healthPersoldier, int int_damagePerSoldier, int int_defencePerSoldier, int int_amountOfSoldiersPerUnit, const std::string& string_unitName) {
-	this->healthPerSoldier = int_healthPersoldier;
-	this->damagePerSoldier = int_damagePerSoldier;
-	this->defencePerSoldier = int_defencePerSoldier;
-	this->amountOfSoldiersPerUnit = int_amountOfSoldiersPerUnit;
-	this->unitName = string_unitName;
-}
+Infantry::Infantry(int int_healthPersoldier, int int_damagePerSoldier, int int_defencePerSoldier, int int_amountOfSoldiersPerUnit, const std::string& string_unitName)
+    : Soldier(int_healthPersoldier, int_damagePerSoldier, int_defencePerSoldier, int_amountOfSoldiersPerUnit, string_unitName), healthPerSoldier(int_healthPersoldier), damagePerSoldier(int_damagePerSoldier), defencePerSoldier(int_defencePerSoldier), amountOfSoldiersPerUnit(int_amountOfSoldiersPerUnit), unitName(string_unitName) {}
 
-Infantry::Infantry(const Infantry &other)
-{
-	this->healthPerSoldier = other.healthPerSoldier;
-	this->damagePerSoldier = other.damagePerSoldier;
-	this->defencePerSoldier = other.defencePerSoldier;
-	this->amountOfSoldiersPerUnit = other.amountOfSoldiersPerUnit;
-	this->unitName = other.unitName;
-}
+Infantry::Infantry(const Infantry& other)
+    : Soldier(other), healthPerSoldier(other.healthPerSoldier), damagePerSoldier(other.damagePerSoldier), defencePerSoldier(other.defencePerSoldier), amountOfSoldiersPerUnit(other.amountOfSoldiersPerUnit), unitName(other.unitName) {}
+
 
 
 Soldier* Infantry::clonis() {

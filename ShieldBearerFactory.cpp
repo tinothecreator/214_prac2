@@ -11,8 +11,8 @@ Soldier* ShieldBearerFactory::createUnit(int amountOfSoldiersPerUnit) {
 	//defence => 60
 	//amount of soldiers per unit => 
 	//name =>  alpha
-	soldiers = new ShieldBearer(120,20,60,amountOfSoldiersPerUnit,"alpha");
-	return soldiers;
+	Soldier* newShieldBearer = new ShieldBearer(120,20,60,amountOfSoldiersPerUnit,"alpha");
+	return newShieldBearer;
 }
 
 int ShieldBearerFactory::calculateTotalHeathPerUnit() {

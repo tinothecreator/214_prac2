@@ -11,8 +11,8 @@ Soldier* BoatmanFactory::createUnit(int amountOfSoldiersPerUnit) {
 	//defence => 20
 	//amount of soldiers per unit => 
 	//name =>  beta
-	soldiers = new Boatman(80,40,20,amountOfSoldiersPerUnit,"beta");
-	return soldiers;
+	Soldier* newBoatman = new Boatman(80,40,20,amountOfSoldiersPerUnit,"beta");
+	return newBoatman;
 }
 
 int BoatmanFactory::calculateTotalHeathPerUnit() {
