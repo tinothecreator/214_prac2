@@ -27,8 +27,7 @@ Infantry::Infantry(const Infantry &other)
 
 
 Soldier* Infantry::clonis() {
-	// TODO - implement Infantry::clonis
-	throw "Not yet implemented";
+	return new Infantry(*this);
 }
 
 void Infantry::engage() {

@@ -28,8 +28,7 @@ Boatman::Boatman(const Boatman &other)
 
 
 Soldier* Boatman::clonis() {
-	// TODO - implement Boatman::clonis
-	throw "Not yet implemented";
+	return new Boatman(*this);
 }
 
 void Boatman::engage() {

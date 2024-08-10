@@ -28,8 +28,7 @@ ShieldBearer::ShieldBearer(const ShieldBearer &other)
 
 
 Soldier* ShieldBearer::clonis() {
-	// TODO - implement ShieldBearer::clonis
-	throw "Not yet implemented";
+	return new ShieldBearer(*this);
 }
 
 void ShieldBearer::engage() {
