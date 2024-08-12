@@ -10,10 +10,18 @@ int main() {
     // Create a CareTaker to manage state saves
     CareTaker careTaker;
 
+
+    // Show army stats before attacking
+    std::cout << "Army Stats Before Attack:" << std::endl;
+    titus.displayArmyStats();
+
     // Initial attack
     std::cout << "Initial Attack:" << std::endl;
     titus.attack();
 
+    // Show army stats after attacking
+    std::cout << "\nArmy Stats After Attack:" << std::endl;
+    titus.displayArmyStats();
 
     // Save the state of the army
     std::cout << "\nSaving the state of the army..." << std::endl;
@@ -34,6 +42,11 @@ int main() {
     // Restore the army to its original state
     std::cout << "\nRestoring the army to its original state..." << std::endl;
     titus.restoreState(careTaker, 0);
+
+
+    // Show army stats after restoring the original state
+    std::cout << "\nArmy Stats After Restoring Original State:" << std::endl;
+    titus.displayArmyStats();
 
     // Attack with the restored state
     std::cout << "\nAttack with restored state:" << std::endl;

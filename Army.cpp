@@ -7,16 +7,16 @@ Army::Army() {
 }
 
 Army::Army(int infantry_size, int boatman_size, int shieldbearer_size) {
-	InfantryFactory * infantryFactory; // made them pointers because it's the only thing that took the errors away lol ><
-	BoatmanFactory * boatmanFactory; // also included these h files in army.h
-	ShieldBearerFactory * shieldbearerFactory;
-   // std::cout<<"Army 1\n";
+	InfantryFactory  infantryFactory; 
+	BoatmanFactory  boatmanFactory; 
+	ShieldBearerFactory  shieldbearerFactory;
+    //std::cout<<"Army 1\n";
 	this->size = infantry_size+boatman_size+shieldbearer_size;
 
 	for (int i = 0; i < infantry_size; ++i) {
        
-      // std::cout<<"createunit 0\n";
-		Soldier* newInfantry = infantryFactory->createUnit(infantry_size);
+        //std::cout<<"createunit 0\n";
+		Soldier* newInfantry = infantryFactory.createUnit(infantry_size);
         //std::cout<<"createunit 1\n";
 		soldiers.push_back(newInfantry);
         
@@ -26,7 +26,7 @@ Army::Army(int infantry_size, int boatman_size, int shieldbearer_size) {
 
     for (int i = 0; i < boatman_size; ++i) {
        
-		Soldier* newBoatman = boatmanFactory->createUnit(boatman_size);
+		Soldier* newBoatman = boatmanFactory.createUnit(boatman_size);
 		soldiers.push_back(newBoatman);
     
     }
@@ -35,7 +35,7 @@ Army::Army(int infantry_size, int boatman_size, int shieldbearer_size) {
 
     for (int i = 0; i < shieldbearer_size; ++i) {
         
-		Soldier* newShieldBearer = shieldbearerFactory->createUnit(shieldbearer_size);
+		Soldier* newShieldBearer = shieldbearerFactory.createUnit(shieldbearer_size);
 		soldiers.push_back(newShieldBearer);
         
     }
@@ -91,6 +91,29 @@ void Army::disengage() {
             break;  
         }
     }
+}
+
+
+void Army::displayStats() {
+    int totalHealth = 0;
+    int totalDamage = 0;
+    int totalDefence = 0;
+
+    InfantryFactory  infantryFactory;
+	BoatmanFactory boatmanFactory; 
+	ShieldBearerFactory  shieldbearerFactory;
+    
+   
+    
+    totalHealth = infantryFactory.calculateTotalHeathPerUnit() + boatmanFactory.calculateTotalHeathPerUnit() + shieldbearerFactory.calculateTotalHeathPerUnit();
+    totalDamage = infantryFactory.calculateTotalDamagePerUnit() + boatmanFactory.calculateTotalDamagePerUnit() + shieldbearerFactory.calculateTotalDamagePerUnit();
+    totalDefence = infantryFactory.calculateTotalDefencePerUnit() + boatmanFactory.calculateTotalDefencePerUnit() + shieldbearerFactory.calculateTotalDefencePerUnit();
+
+
+    std::cout << "Army Stats: " << std::endl;
+    std::cout << "Total Health: " << totalHealth << std::endl;
+    std::cout << "Total Damage: " << totalDamage << std::endl;
+    std::cout << "Total Defence: " << totalDefence << std::endl;
 }
 
 

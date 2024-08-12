@@ -14,7 +14,7 @@ private:
 	Soldier* soldiers;
 
 protected:
-	virtual Soldier* createUnit() = 0;
+	virtual Soldier* createUnit(int amountOfSoldiersPerUnit) = 0;
 
 	virtual int calculateTotalHeathPerUnit() = 0;
 

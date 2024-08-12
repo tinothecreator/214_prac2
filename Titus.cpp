@@ -52,6 +52,10 @@ void Titus::restoreState(CareTaker& careTaker, size_t index) { // not decalred i
 	}
 }
 
+void Titus::displayArmyStats() {
+    amry->displayStats();
+}
+
 
 Titus::~Titus() {
     delete amry;

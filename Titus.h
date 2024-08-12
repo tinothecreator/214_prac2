@@ -30,6 +30,8 @@ public:
 	void saveState(CareTaker& careTaker);
 
 	void restoreState(CareTaker& careTaker, size_t index);
+
+	void displayArmyStats();
 };
 
 #endif

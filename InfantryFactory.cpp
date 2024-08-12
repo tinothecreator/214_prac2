@@ -19,13 +19,15 @@ Soldier* InfantryFactory::createUnit(int amountOfSoldiersPerUnit) {
 }
 
 int InfantryFactory::calculateTotalHeathPerUnit() {
-	return soldiers->healthPerSoldier * soldiers->amountOfSoldiersPerUnit;
+	//std::cout << soldiers->healthPerSoldier * soldiers->amountOfSoldiersPerUnit;
+	return soldiers ? soldiers->healthPerSoldier * soldiers->amountOfSoldiersPerUnit : 0;
 }
 
 int InfantryFactory::calculateTotalDamagePerUnit() {
-	return soldiers->damagePerSoldier * soldiers->amountOfSoldiersPerUnit;
+	return soldiers ? soldiers->damagePerSoldier * soldiers->amountOfSoldiersPerUnit : 0;
 }
 
 int InfantryFactory::calculateTotalDefencePerUnit() {
-	return soldiers->defencePerSoldier * soldiers->amountOfSoldiersPerUnit;
+	return soldiers ? soldiers->defencePerSoldier * soldiers->amountOfSoldiersPerUnit : 0;
+
 }

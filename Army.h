@@ -24,6 +24,8 @@ public:
 
 	void disengage();
 
+	void displayStats(); 
+
 	~Army();
 
 	std::vector<Soldier*>& getSoldiers(); //added for Titus
