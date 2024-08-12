@@ -95,19 +95,16 @@ void Army::disengage() {
 
 
 void Army::displayStats() {
-    int totalHealth = 0;
-    int totalDamage = 0;
-    int totalDefence = 0;
-
+   
     InfantryFactory  infantryFactory;
 	BoatmanFactory boatmanFactory; 
 	ShieldBearerFactory  shieldbearerFactory;
     
    
     
-    totalHealth = infantryFactory.calculateTotalHeathPerUnit() + boatmanFactory.calculateTotalHeathPerUnit() + shieldbearerFactory.calculateTotalHeathPerUnit();
-    totalDamage = infantryFactory.calculateTotalDamagePerUnit() + boatmanFactory.calculateTotalDamagePerUnit() + shieldbearerFactory.calculateTotalDamagePerUnit();
-    totalDefence = infantryFactory.calculateTotalDefencePerUnit() + boatmanFactory.calculateTotalDefencePerUnit() + shieldbearerFactory.calculateTotalDefencePerUnit();
+    int totalHealth = infantryFactory.calculateTotalHeathPerUnit() + boatmanFactory.calculateTotalHeathPerUnit() + shieldbearerFactory.calculateTotalHeathPerUnit();
+    int totalDamage = infantryFactory.calculateTotalDamagePerUnit() + boatmanFactory.calculateTotalDamagePerUnit() + shieldbearerFactory.calculateTotalDamagePerUnit();
+    int totalDefence = infantryFactory.calculateTotalDefencePerUnit() + boatmanFactory.calculateTotalDefencePerUnit() + shieldbearerFactory.calculateTotalDefencePerUnit();
 
 
     std::cout << "Army Stats: " << std::endl;
