@@ -45,17 +45,54 @@ Army::Army(int infantry_size, int boatman_size, int shieldbearer_size) {
 
 void Army::engage() {
     std::cout << "The army is engaging in combat!" << std::endl;
+    
+    bool infantryEngaged = false;
+    bool boatmanEngaged = false;
+    bool shieldBearerEngaged = false;
+
     for (Soldier* soldier : soldiers) {
-        soldier->engage();  // Call the engage method on each Soldier
+        if (!infantryEngaged && dynamic_cast<Infantry*>(soldier)) {
+            soldier->engage();
+            infantryEngaged = true;
+        } else if (!boatmanEngaged && dynamic_cast<Boatman*>(soldier)) {
+            soldier->engage();
+            boatmanEngaged = true;
+        } else if (!shieldBearerEngaged && dynamic_cast<ShieldBearer*>(soldier)) {
+            soldier->engage();
+            shieldBearerEngaged = true;
+        }
+
+        if (infantryEngaged && boatmanEngaged && shieldBearerEngaged) {
+            break;  
+        }
     }
 }
 
 void Army::disengage() {
     std::cout << "The army is retreating from combat!" << std::endl;
+
+    bool infantryDisengaged = false;
+    bool boatmanDisengaged = false;
+    bool shieldBearerDisengaged = false;
+
     for (Soldier* soldier : soldiers) {
-        soldier->disengage();  // Call the disengage method on each Soldier
+        if (!infantryDisengaged && dynamic_cast<Infantry*>(soldier)) {
+            soldier->disengage();
+            infantryDisengaged = true;
+        } else if (!boatmanDisengaged && dynamic_cast<Boatman*>(soldier)) {
+            soldier->disengage();
+            boatmanDisengaged = true;
+        } else if (!shieldBearerDisengaged && dynamic_cast<ShieldBearer*>(soldier)) {
+            soldier->disengage();
+            shieldBearerDisengaged = true;
+        }
+
+        if (infantryDisengaged && boatmanDisengaged && shieldBearerDisengaged) {
+            break;  
+        }
     }
 }
+
 
 
 Army::~Army() { // didn't declare properly 

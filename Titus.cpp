@@ -55,6 +55,7 @@ void Titus::restoreState(CareTaker& careTaker, size_t index) { // not decalred i
 
 Titus::~Titus() {
     delete amry;
+    std::cout << name << " is being destroyed\n";
 }
 
 
